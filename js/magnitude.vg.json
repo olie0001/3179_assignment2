@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 1000,
-    "height": 250,
-    "title": "Number of Eruptions over the Year",
+    "width": 500,
+    "height": 500,
+    "title": "Number of Eruptions per Volcanic Explosivity Index",
     "config": {
         "title": {
             "color": "white"
@@ -22,6 +22,18 @@
     "data": {
         "url": "https://raw.githubusercontent.com/olie0001/3179_assignment2/main/data/volcano-events0-21.csv"
     },
+    "mark": "bar",
+    "encoding": {
+        "x": {
+            "field": "VEI",
+            "type": "nominal",
+            "title": "Volcanic Explosivity Index"
+        },
+        "y": {
+            "aggregate": "count",
+            "title": "Number of Eruptions"
+        }
+    },
     "transform": [
         {
             "filter": {
@@ -30,30 +42,11 @@
             }
         },
         {
-            "filter": "datum.Year > 1990"
+            "filter": {
+                "field": "VEI",
+                "range": [1,7]
+            }
         }
     ],
-    "mark": {
-        "type": "circle",
-        "opacity": 0.3
-    },
-    "encoding": {
-        "x": {
-            "field": "Year",
-            "type": "ordinal",
-            "axis": {
-                "grid": false
-            }
-        },
-        "size": {
-            "field": "VEI",
-            "type": "quantitative",
-            "title": "Volcanic Explosivity Index",
-            "scale": {
-                "domain": [1, 2, 3, 4, 5],
-                "range": [1000, 2000, 3000, 4000]
-            }
-        }
-    },
     "background": "black"
 }

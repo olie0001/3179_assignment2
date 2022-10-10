@@ -18,12 +18,21 @@
     <div>
 
         <center>
+
+            <p style="font-size: 50px; color: white; font-family: sans-serif;"><b>Volcanoes in Indonesia</b></p>
         
             <!--Map-->
             <div id="map"></div>
 
+            <br><br>
+
             <!--Timeline-->
             <div id="timeline"></div>
+
+            <br><br>
+
+            <!--Magnitude-->
+            <div id="magnitude"></div>
 
         </center>
 
@@ -40,6 +49,11 @@
         // Timeline
         var timeline = 'js/timeline.vg.json';
         vegaEmbed('#timeline', timeline).then(function (result) {
+        }).catch(console.error);
+
+        // Magnitude
+        var magnitude = 'js/magnitude.vg.json';
+        vegaEmbed('#magnitude', magnitude).then(function (result) {
         }).catch(console.error);
 
     </script>
