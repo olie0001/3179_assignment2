@@ -54,7 +54,21 @@
                 "color": {
                     "field": "Type",
                     "type": "nominal",
-                    "title": "Volcano Type"
+                    "title": "Volcano Type",
+                    "scale": {
+                        "domain": [
+                            "Caldera",
+                            "Complex volcano",
+                            "Stratovolcano",
+                            "Submarine volcano"
+                        ],
+                        "range": [
+                            "#3A6351",
+                            "#F2EDD7",
+                            "#A0937D",
+                            "#5F939A"
+                        ]
+                    }
                 }
             },
             "transform": [

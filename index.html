@@ -15,10 +15,13 @@
 
 <body>
 
-    <div>
+    <div class="center">
         
         <!--Map-->
         <div id="map"></div>
+
+        <!--Timeline-->
+        <div id="timeline"></div>
 
     </div>
 
@@ -28,6 +31,11 @@
         // Map
         var map = 'js/map.vg.json';
         vegaEmbed('#map', map).then(function (result) {
+        }).catch(console.error);
+
+        // Timeline
+        var timeline = 'js/timeline.vg.json';
+        vegaEmbed('#timeline', timeline).then(function (result) {
         }).catch(console.error);
 
     </script>
