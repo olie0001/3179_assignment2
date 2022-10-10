@@ -3,6 +3,23 @@
     "width": 800,
     "height": 400,
     "title": "Number of Deaths based on Volcano Type",
+    "config": {
+        "title": {
+            "color": "white"
+        },
+        "axis": {
+            "titleColor": "white",
+            "labelColor": "white",
+            "gridColor": "white",
+            "domainColor": "white",
+            "tickColor": "white"
+        },
+        "legend": {
+            "titleColor": "white",
+            "labelColor": "white",
+            "symbolFillColor": "white"
+        }
+    },
     "projection": {
         "type": "equalEarth"
     },
@@ -17,7 +34,7 @@
             },
             "mark": {
                 "type": "geoshape",
-                "fill": "lightgray",
+                "fill": "gray",
                 "stroke": "white"
             }
         },
@@ -26,7 +43,8 @@
                 "url": "https://raw.githubusercontent.com/olie0001/3179_assignment2/main/data/volcano-events0-21.csv"
             },
             "mark": {
-                "type": "circle"
+                "type": "circle",
+                "opacity": 0.8
             },
             "encoding": {
                 "longitude": {
@@ -45,7 +63,7 @@
                     "scale": {
                         "type": "threshold",
                         "domain": [10000, 20000, 30000, 40000, 50000, 60000],
-                        "range": [100, 200, 300, 400, 500, 600]
+                        "range": [100, 200, 400, 800, 1600, 3200]
                     },
                     "legend": {
                         "format": ".1s"
@@ -63,10 +81,10 @@
                             "Submarine volcano"
                         ],
                         "range": [
-                            "#3A6351",
-                            "#F2EDD7",
-                            "#A0937D",
-                            "#5F939A"
+                            "#FFF9CA",
+                            "#FFDEB4",
+                            "#FFB4B4",
+                            "#B2A4FF"
                         ]
                     }
                 }
@@ -80,5 +98,6 @@
                 }
             ]
         }
-    ]
+    ],
+    "background": "black"
 }

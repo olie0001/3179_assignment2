@@ -1,7 +1,24 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 1000,
-    "height": 300,
+    "height": 200,
+    "title": "Number of Eruptions over the Year",
+    "config": {
+        "title": {
+            "color": "white"
+        },
+        "axis": {
+            "titleColor": "white",
+            "labelColor": "white",
+            "gridColor": "white",
+            "domainColor": "white",
+            "tickColor": "white"
+        },
+        "legend": {
+            "titleColor": "white",
+            "labelColor": "white"
+        }
+    },
     "data": {
         "url": "https://raw.githubusercontent.com/olie0001/3179_assignment2/main/data/volcano-events0-21.csv"
     },
@@ -27,9 +44,10 @@
             "type": "quantitative",
             "title": "Volcanic Explosivity Index",
             "scale": {
-                "domain": [1, 2, 3, 4, 5, 6, 7],
-                "range": [100, 200, 400, 800, 1600, 3200, 6400]
+                "domain": [1, 2, 3, 4, 5, 6],
+                "range": [100, 200, 400, 800, 1600, 3200]
             }
         }
-    }
+    },
+    "background": "black"
 }
