@@ -1,3 +1,14 @@
+body {
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+}
+
 #map {
     top: 100px;
     bottom: 100px;
