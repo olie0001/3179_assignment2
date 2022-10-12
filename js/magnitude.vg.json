@@ -32,7 +32,20 @@
         "y": {
             "aggregate": "count",
             "title": "Number of Eruptions"
-        }
+        },
+        "tooltip": [
+            {
+                "field": "VEI",
+                "title": "Volcanic Explosivity Index",
+                "type": "nominal"
+            },
+            {
+                "aggregate": "count",
+                "title": "Number of Eruptions",
+                "type": "quantitative",
+                "format": ","
+            }
+        ]
     },
     "transform": [
         {

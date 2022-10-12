@@ -87,7 +87,31 @@
                             "#B2A4FF"
                         ]
                     }
-                }
+                },
+                "tooltip": [
+                    {
+                        "field": "Name",
+                        "title": "Volcano Name",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "Type",
+                        "title": "Volcano Type",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "Elevation",
+                        "title": "Elevation",
+                        "type": "quantitative",
+                        "format": ",.2f"
+                    },
+                    {
+                        "field": "TotalDeaths",
+                        "title": "Number of Deaths",
+                        "type": "quantitative",
+                        "format": ","
+                    }
+                ]
             },
             "transform": [
                 {

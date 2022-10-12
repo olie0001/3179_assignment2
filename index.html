@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
     <!--Vegalite stuff-->
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
@@ -10,37 +8,38 @@
 
     <!--CSS stuff-->
     <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
-
 </head>
 
 <body>
+    <div style="width: 100%;">
+        <center><p style="font-size: 50px; color: white; font-family: sans-serif;"><b>Volcanoes in Indonesia</b></p></center>
+    </div>
 
-    <div>
-
+    <div style="width: 100%;">
         <center>
-
-            <p style="font-size: 50px; color: white; font-family: sans-serif;"><b>Volcanoes in Indonesia</b></p>
-        
             <!--Map-->
-            <div id="map"></div>
+            <div>
+                <div id="map"></div>
+            </div>
 
             <br><br>
 
             <!--Timeline-->
-            <div id="timeline"></div>
+            <div>
+                <div id="timeline"></div>
+            </div>
 
             <br><br>
 
             <!--Magnitude-->
-            <div id="magnitude"></div>
-
+            <div>
+                <div id="magnitude"></div>
+            </div>
         </center>
-
     </div>
 
     <!--JavaScript stuff-->
     <script type="text/javascript">
-
         // Map
         var map = 'js/map.vg.json';
         vegaEmbed('#map', map).then(function (result) {
@@ -55,9 +54,6 @@
         var magnitude = 'js/magnitude.vg.json';
         vegaEmbed('#magnitude', magnitude).then(function (result) {
         }).catch(console.error);
-
     </script>
-
 </body>
-
 </html>

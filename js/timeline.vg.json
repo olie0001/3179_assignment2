@@ -53,7 +53,35 @@
                 "domain": [1, 2, 3, 4, 5],
                 "range": [1000, 2000, 3000, 4000]
             }
-        }
+        },
+        "tooltip": [
+            {
+                "field": "Name",
+                "title": "Volcano Name",
+                "type": "nominal"
+            },
+            {
+                "field": "Type",
+                "title": "Volcano Type",
+                "type": "nominal"
+            },
+            {
+                "field": "Elevation",
+                "title": "Elevation",
+                "type": "quantitative",
+                "format": ",.2f"
+            },
+            {
+                "field": "Year",
+                "title": "Eruption Year",
+                "type": "ordinal"
+            },
+            {
+                "field": "VEI",
+                "title": "Volcanic Explosivity Index",
+                "type": "quantitative"
+            }
+        ]
     },
     "background": "black"
 }
