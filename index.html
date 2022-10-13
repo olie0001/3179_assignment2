@@ -35,6 +35,13 @@
             <div>
                 <div id="magnitude"></div>
             </div>
+
+            <br><br>
+
+            <!--Ordered Bar-->
+            <div>
+                <div id="orderedbar"></div>
+            </div>
         </center>
     </div>
 
@@ -53,6 +60,11 @@
         // Magnitude
         var magnitude = 'js/magnitude.vg.json';
         vegaEmbed('#magnitude', magnitude).then(function (result) {
+        }).catch(console.error);
+
+        // Ordered Bar
+        var orderedbar = 'js/orderedbar.vg.json';
+        vegaEmbed('#orderedbar', orderedbar).then(function (result) {
         }).catch(console.error);
     </script>
 </body>

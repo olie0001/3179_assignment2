@@ -1,0 +1,75 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 500,
+    "title": "Top 5 Deadliest Volcanoes",
+    "config": {
+        "title": {
+            "color": "white"
+        },
+        "axis": {
+            "titleColor": "white",
+            "labelColor": "white",
+            "gridColor": "white",
+            "domainColor": "white",
+            "tickColor": "white"
+        },
+        "legend": {
+            "titleColor": "white",
+            "labelColor": "white"
+        }
+    },
+    "data": {
+        "url": "https://raw.githubusercontent.com/olie0001/3179_assignment2/main/data/volcano-events0-21.csv"
+    },
+    "mark": "bar",
+    "encoding": {
+        "x": {
+            "field": "SumOfDeaths",
+            "title": "Number of Deaths",
+            "type": "quantitative"
+        },
+        "y": {
+            "field": "Name",
+            "title": "Volcano",
+            "type": "nominal",
+            "sort": "-x"
+        }
+    },
+    "transform": [
+        {
+            "filter": {
+                "field": "Country",
+                "equal": "Indonesia"
+            }
+        },
+        {
+            "aggregate": [
+                {
+                    "op": "sum",
+                    "field": "TotalDeaths",
+                    "as": "SumOfDeaths"
+                }
+            ],
+            "groupby": ["Name"]
+        },
+        {
+            "window": [
+                {
+                    "op": "rank",
+                    "as": "rank"
+                }
+            ],
+            "sort": [
+                {
+                    "field": "SumOfDeaths",
+                    "order": "descending"
+                }
+            ]
+        },
+        {
+            "filter": "datum.rank <= 5"
+        }
+    ],
+    "background": "black"
+}
