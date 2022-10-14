@@ -27,7 +27,10 @@
         "x": {
             "field": "VEI",
             "type": "nominal",
-            "title": "Volcanic Explosivity Index"
+            "title": "Volcanic Explosivity Index",
+            "axis": {
+                "labelAngle": 0
+            }
         },
         "y": {
             "aggregate": "count",
