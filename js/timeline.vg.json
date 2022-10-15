@@ -22,6 +22,29 @@
     "data": {
         "url": "https://raw.githubusercontent.com/olie0001/3179_assignment2/main/data/volcano-events0-21.csv"
     },
+    "params": [
+        {
+            "name": "type_selection",
+            "bind": {
+                "input": "select",
+                "options": [
+                    null,
+                    "Caldera",
+                    "Complex volcano",
+                    "Stratovolcano",
+                    "Submarine volcano"
+                ],
+                "labels": [
+                    "Show All",
+                    "Caldera Volcano",
+                    "Complex Volcano",
+                    "Stratovolcano",
+                    "Submarine Volcano"
+                ],
+                "name": "Volcano Type Selection: "
+            }
+        }
+    ],
     "transform": [
         {
             "filter": {
@@ -31,6 +54,9 @@
         },
         {
             "filter": "datum.Year > 1990"
+        },
+        {
+            "filter": "type_selection == null || datum.Type == type_selection"
         }
     ],
     "mark": {
