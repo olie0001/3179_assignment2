@@ -1,8 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 1000,
-    "height": 250,
-    "title": "Number of Eruptions over the Year",
+    "height": 300,
     "config": {
         "title": {
             "color": "white"
@@ -16,7 +15,8 @@
         },
         "legend": {
             "titleColor": "white",
-            "labelColor": "white"
+            "labelColor": "white",
+            "symbolFillColor": "white"
         }
     },
     "data": {
@@ -68,7 +68,8 @@
             "field": "Year",
             "type": "ordinal",
             "axis": {
-                "grid": false
+                "grid": false,
+                "labelAngle": 0
             }
         },
         "size": {
@@ -78,6 +79,25 @@
             "scale": {
                 "domain": [1, 2, 3, 4, 5],
                 "range": [1000, 2000, 3000, 4000]
+            }
+        },
+        "color": {
+            "field": "Type",
+            "type": "nominal",
+            "title": "Volcano Type",
+            "scale": {
+                "domain": [
+                    "Caldera",
+                    "Complex volcano",
+                    "Stratovolcano",
+                    "Submarine volcano"
+                ],
+                "range": [
+                    "#FFF9CA",
+                    "#e48254",
+                    "#FFB4B4",
+                    "#B2A4FF"
+                ]
             }
         },
         "tooltip": [

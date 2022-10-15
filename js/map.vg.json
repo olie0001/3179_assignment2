@@ -7,7 +7,6 @@
         {
             "width": 800,
             "height": 400,
-            "title": "Number of Deaths based on Volcano Type",
             "projection": {
                 "type": "equalEarth"
             },
@@ -133,10 +132,14 @@
             ],
             "encoding": {
                 "x": {
-                    "field": "Year"
+                    "field": "Year",
+                    "axis": {
+                        "labelAngle": 0
+                    }
                 },
                 "y": {
-                    "aggregate": "count"
+                    "aggregate": "count",
+                    "title": "Number of Eruptions"
                 }
             }
         }
