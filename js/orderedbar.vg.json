@@ -34,7 +34,20 @@
             "title": "Volcano",
             "type": "nominal",
             "sort": "-x"
-        }
+        },
+        "tooltip": [
+            {
+                "field": "Name",
+                "title": "Volcano Name",
+                "type": "nominal"
+            },
+            {
+                "field": "SumOfDeaths",
+                "title": "Number of Deaths",
+                "type": "quantitative",
+                "format": ","
+            }
+        ]
     },
     "transform": [
         {

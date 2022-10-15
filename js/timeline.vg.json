@@ -93,7 +93,7 @@
             },
             {
                 "field": "Elevation",
-                "title": "Elevation",
+                "title": "Elevation (m)",
                 "type": "quantitative",
                 "format": ",.2f"
             },
