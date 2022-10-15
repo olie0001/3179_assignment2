@@ -2,7 +2,6 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 500,
     "height": 500,
-    "title": "Number of Eruptions per Volcanic Explosivity Index",
     "config": {
         "title": {
             "color": "white"
@@ -31,17 +30,15 @@
                     null,
                     "Caldera",
                     "Complex volcano",
-                    "Stratovolcano",
-                    "Submarine volcano"
+                    "Stratovolcano"
                 ],
                 "labels": [
                     "Show All",
                     "Caldera Volcano",
                     "Complex Volcano",
-                    "Stratovolcano",
-                    "Submarine Volcano"
+                    "Stratovolcano"
                 ],
-                "name": "Volcano Type Selection: "
+                "name": "Volcano Type: "
             }
         },
         {
@@ -51,7 +48,7 @@
                 "input": "range",
                 "min": 1000,
                 "max": 3000,
-                "name": "Minimum Volcano Elevation: "
+                "name": "Minimum Volcano Elevation (m): "
             }
         }
     ],
@@ -68,6 +65,9 @@
         "y": {
             "aggregate": "count",
             "title": "Number of Eruptions"
+        },
+        "color": {
+            "value": "#fae588"
         },
         "tooltip": [
             {

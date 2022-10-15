@@ -41,7 +41,7 @@
                     "Stratovolcano",
                     "Submarine Volcano"
                 ],
-                "name": "Volcano Type Selection: "
+                "name": "Volcano Type: "
             }
         }
     ],
@@ -61,7 +61,7 @@
     ],
     "mark": {
         "type": "circle",
-        "opacity": 0.3
+        "opacity": 0.8
     },
     "encoding": {
         "x": {
@@ -93,7 +93,7 @@
                     "Submarine volcano"
                 ],
                 "range": [
-                    "#FFF9CA",
+                    "#d5a37b",
                     "#e48254",
                     "#FFB4B4",
                     "#B2A4FF"
